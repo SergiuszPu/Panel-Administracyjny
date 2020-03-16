@@ -1,0 +1,32 @@
+@mixin centerAbsolutely($top, $left, $right, $transform) { 
+  position: absolute; 
+  top: $top; 
+  left: $left;
+  right: $right;
+  transform: $transform; 
+}
+@mixin buttonStyle($width, $height, $margin, $background){
+  width: $width;
+  height: $height;
+  margin: $margin;
+  background: $background;
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  transition: all .4s;
+}
+@mixin displayFlex($align-items, $justify-content) {
+	display: flex;
+	align-items: $align-items;
+	justify-content: $justify-content;
+}
+@mixin fixedStyle($top, $right, $width, $height) { 
+	position: fixed;
+	top: $top;
+	right: $right;
+	width: $width;
+	height: $height;
+}
+

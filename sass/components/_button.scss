@@ -1,0 +1,41 @@
+.btn_refresh {
+    @include buttonStyle($width: 40px, $height: 40px, $margin: 10px, $background: $dark_orange);
+    align-items: center;
+    &:hover {
+        background: $orange;
+    }
+    .icon-refresh {
+    	padding: 0;
+    }
+}
+.btn_orange {
+    @include buttonStyle($width: 125px, $height: 40px, $margin: 20px auto, $background: $dark_orange);
+    &:hover {
+        background-color: $orange;
+    }
+}
+.btn_disabled {
+    @include buttonStyle($width: 140px, $height: 40px, $margin: 0 auto, $background: $grey);
+    cursor: default;
+    .icon-links {
+        padding-right: 10px;
+    }
+}
+.btn_grey {
+    @include buttonStyle($width: 125px, $height: 40px, $margin: 20px auto, $background: $dark_grey);
+    &:hover {
+        background-color: $grey;
+    }
+}
+.btn_top {
+    background: none; 
+    border: none; 
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    color: $dark_grey;
+    @media(max-width: 767px) {
+            padding: 5px;
+    }
+}

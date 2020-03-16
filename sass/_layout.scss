@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: $main-font;
+    text-align: center;
+    background: $light-grey;
+}
+
+.main {
+    margin: 80px 0 0 220px;
+    width: calc(100% - 220px);
+    transition: all .40s ease;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1024px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section {
+    box-shadow: 0 0 1em $grey;
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.hidden {
+    display: none;
+ }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .row::before, .row::after {
+    content: " ";
+    display: table; 
+    clear: both;
+}
+
+[class*="col-"] {
+    width: 100%;
+    padding: 25px;
+    float: left;
+    @media(max-width: 767px) {
+        padding: 15px;
+    }   
+}
+
+@for $i from 1 through 12 {
+    .col-sm-#{$i} {
+    $width: 100% / 12 * $i;
+    flex: 0 0 $width;
+    max-width: $width;
+    }
+}

@@ -1,0 +1,40 @@
+.date_section {
+    border-bottom: 1px solid $grey;
+}
+.date {
+    @include displayFlex($align-items:center, $justify-content:center);
+    margin: 10px auto;  
+    &_inputs {
+        @include displayFlex($align-items:center, $justify-content:space-between);
+        height: 40px;
+        width: 340px;
+        border: 1px solid $grey;
+        border-radius: 4px;
+
+        &:hover {
+            cursor: pointer;
+            transition: all .4s;
+            border: 1px solid $dark_grey;
+            .date_icon {
+                color: $black;
+            }
+        }
+    }
+    
+    &_start {
+        justify-content: flex-start;
+        padding: 5px 0 5px 15px;
+    }
+
+    &_end {
+        justify-content: flex-start;
+        padding: 5px 0 5px 15px;
+        border-left: 1px solid $grey;
+    }
+
+    &_icon {
+        justify-content: flex-end;
+        color: $dark_grey;
+        padding-right: 15px;
+    }
+}

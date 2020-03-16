@@ -1,0 +1,31 @@
+.general {
+	&_result {
+		max-width: 800px;
+        text-align: left;
+        color: $dark_grey;
+        font-size: $header_font_size;
+        line-height: 30px;
+    }
+    &_text {
+    	border-bottom: 1px solid $grey;
+    	font-weight: 700;
+    }
+    &_no {
+    	float: right;
+    	font-weight: normal;
+    	color: $black;
+    }
+}
+.graphs {
+    position: relative;
+    min-width: 280px;   
+	max-width: 800px;
+	margin: 20px auto;
+    padding-bottom: 40px;
+	&_header {
+		text-align: left;
+        padding: 20px 20px;
+		font-size: $header_font_size;
+		color: $dark_grey;
+	}
+}

@@ -1,0 +1,10 @@
+.section_header {
+	@include displayFlex($align-items:auto, $justify-content:flex-start);
+	text-align: left;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 20px 20px;
+	font-size: $header_font_size;
+	color: $dark_grey;
+	border-bottom: 1px solid $grey;
+}

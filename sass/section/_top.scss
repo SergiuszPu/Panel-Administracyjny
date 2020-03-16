@@ -1,0 +1,52 @@
+.header {
+    background: #fff;
+    border-bottom: 1px solid $grey;
+    z-index: 1;
+    @include fixedStyle($top:0, $right:0, $width:100%, $height:60px);
+    @include displayFlex($align-items:auto, $justify-content:flex-end);
+}
+
+.top {
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+    padding: 0;
+
+    &_item {
+		@include displayFlex($align-items:center, $justify-content:center);
+		position: relative;
+		text-decoration: none;
+		cursor: pointer;
+		border-left: 1px solid $grey;
+        font-size: 18px;
+        padding: 0 10px 0 5px;
+        font-size: $header_font_size;
+        
+		&:hover {
+			background: $light_grey;
+		}
+	}
+	&_money {
+		font-weight: 500;
+		font-size: 17px;
+	}
+	&_name {
+		font-size: $paragraph_font_size;
+        color: $blue;
+    }
+    // [class*='icon-'] {
+    // 	padding: 0 10px 0 5px;
+    // 	font-size: $header_font_size;
+    // }
+    .icon-arrow-down-small {
+    	font-size: 10px;
+    } 
+}
+
+.orange_circle {
+	@include centerAbsolutely($top:39%, $left:auto, $right:33%, $transform:translate(-50%, -50%));
+	background: $dark_orange;
+	border-radius: 50%;
+	width: 8px;
+    height: 8px;
+}

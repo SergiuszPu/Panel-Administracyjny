@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+		<title>Panel Administracyjny</title>
+	</head>
+	<body>
+
+		<header class="header">
+			<ul class="top">
+				<li class="top_item">
+					<button class="btn_top modalTrigger">
+						<i class="icon-wallet"></i><span class="top_money">$1,500.00</span><i class="icon-arrow-down-small"></i>
+					</button>
+				</li>
+				<li class="top_item">
+					<button class="btn_top modalTrigger">
+						<i class="icon-notification"></i><span class="orange_circle"></span>
+					</button>
+				</li>
+				<li class="top_item">
+					<button class="btn_top modalTrigger" data-target="start_login">
+						<i class="icon-profile"></i><span class="top_name">Leonardo Dicaprio</span>
+					</button>
+				</li>
+				<li class="top_item">
+					<button class="btn_top modalTrigger" data-target="start_quit">
+						<i class="icon-quit"></i>
+					</button>
+				</li>
+			</ul>
+		</header>
+
+		
+		<nav class="menu_long" id="navigation">
+			<div class="logo_ham">
+				<a href="#"><img class="logo" src="images/logo.png" alt="logo"></a>
+				<a href="#menu" id="toggle" class="hamburger">
+					<div class="menu_ham"></div>
+					<div class="menu_ham"></div>
+					<div class="menu_ham"></div>
+				</a>
+			</div>
+			<ul class="menu" id="leftMenu">
+				<li><a class="menu_link active" href="#general"><i class="icon-general"></i><span class="menu_page">General</span></a></li>
+				<li><a class="menu_link" href="#details"><i class="icon-details"></i><span class="menu_page">Details</span></a></li>
+				<li><a class="menu_link" href="#links"><i class="icon-links"></i><span class="menu_page">Links</span></a></li>
+				<li><a class="menu_link" href="#banners"><i class="icon-banners"></i><span class="menu_page">Banners</span></a></li>
+				<li><a class="menu_link" href="#personal_data"><i class="icon-personaldata"></i><span class="menu_page">Personal data</span></a></li>
+				<li><a class="menu_link" href="#payout"><i class="icon-payout"></i><span class="menu_page">Payout</span></a></li>
+				<li><a class="menu_link" href="#postback"><i class="icon-postback"></i><span class="menu_page">Postback</span></a></li>
+			</ul>
+			<div class="menu_line"></div>
+			<div class="menu_manager">Your manager</div>
+			<button class="menu_avatar modalTrigger" data-target="chat_modal">
+				<img src="images/avatar.png" alt="mikhael">
+				<span class="menu_user">Mikhael E.</span>
+			</button>
+		</nav>
+
+		<main class="main">
+
+	
+		<div class="general toggle" id="general_section">
+			<section class="section">
+				<h1 class=section_header>general statistic</h1>
+				<div class="date_section">
+					<div class="date">
+						<div class="date_inputs">
+							<div class="date_start">16.05.2016</div>
+							<div class="date_end">16.05.2016</div>
+							<div class="date_icon">
+								<i class="icon-calendar"></i>
+							</div>
+						</div>
+						<button class="btn_refresh">
+								<i class="icon-refresh"></i>
+						</button>
+					</div>
+				</div>
+				<div class="general_result container">
+					<div class="row">
+						<div class="col-md-8">
+							<p class="general_text">Visit Signups <span class="general_no">124</span></p>
+							<p class="general_text">FTD <span class="general_no">445</span></p>
+						</div>
+						<div class="col-md-6">
+							<p class="general_text">New deposit <span class="general_no">564</span></p>
+							<p class="general_text">Turn over <span class="general_no">432</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="graphs container">
+					<h2 class="graphs_header">Earnings chart</h2>
+					<!-- <img src="images/tabs.png" alt="tabs"> -->
+					<canvas id="myChart"></canvas>
+				</div>
+			</section>
+			<section class="section gen_links">
+				<h1 class="section_header">links</h1>
+				<button class="btn_orange modalTrigger" data-target="url_modal">+ add new</button>
+				<div class="scroll_wrapper">
+					<table class="links_table container">
+						<tbody>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Home page</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.homepage.com">http://www.homepage.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Currently offer</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.currently.com">http://www.currently.com</a>
+								</td>    
+								<td class="links_line links_icons">    
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Blurpix</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.blurpix.com">http://www.blurpix.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Your Site</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.yoursite.com">http://www.yoursite.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Google</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.google.com">http://www.google.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Facebook</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.facebook.com">http://www.facebook.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Dashboard</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.dashboard.com">http://www.dashboard.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Blurax</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.blurax.com">http://www.blurax.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row"> 
+								<td class="links_line"><span class="links_name">Piece of Wine</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.pieceofwine.com">http://www.pieceofwine.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Twitter</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.twitter.com">http://www.twitter.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<button class="btn_orange modalTrigger" data-target="url_modal">+ add new</button>
+			</section>
+		</div>
+
+			<section class="section details toggle hidden" id="details_section">
+				<h1 class="section_header">detail statistics</h1>
+				<div class="date_section">
+					<div class="date">
+						<div class="date_inputs">
+							<div class="date_start">16.05.2016</div>
+							<div class="date_end">16.05.2016</div>
+							<div class="date_icon">
+								<i class="icon-calendar"></i>
+							</div>
+						</div>
+						<button class="btn_refresh">
+								<i class="icon-refresh"></i>
+						</button>
+					</div>
+				</div>
+				<div class="scroll_wrapper">
+					<table class="details_table container">
+						<thead>
+							<tr class="details_name">
+								<th>Tracker name</th>
+								<th>Initiated date</th>
+								<th>Visits</th>
+								<th>Unique</th>
+								<th>Signups</th>
+								<th>FTD</th>
+								<th>Depositors</th>
+								<th><div class="details_sorter">Deposits ($)<i class="icon-arrow-up-small"></i></div></th>
+								<th>Payout ($)</th>
+								<th>Turnover</th>
+								<th>Deal</th>
+							</tr>
+						</thead>    
+						<tbody> 
+							<tr class="details_row">
+								<td>aff/sam_test</td>
+								<td>17/08/02 (12:58)</td>
+								<td>232</td>
+								<td>114</td>
+								<td>12</td>
+								<td>6</td>
+								<td>3</td>
+								<td>34,425.00</td>
+								<td>234.00</td>
+								<td>421,342.00</td>
+								<td>cpl (200)</td>
+							</tr>
+							<tr class="details_row">
+								<td>aff/leo_test</td>
+								<td>15/08/02 (12:58)</td>
+								<td>232</td>
+								<td>114</td>
+								<td>12</td>
+								<td>6</td>
+								<td>3</td>
+								<td>29,436.00</td>
+								<td>941.00</td>
+								<td>784,435.00</td>
+								<td>cpl (200)</td>
+							</tr>
+							<tr class="details_row">
+								<td>aff/sam_test</td>
+								<td>17/08/02 (12:58)</td>
+								<td>232</td>
+								<td>114</td>
+								<td>12</td>
+								<td>6</td>
+								<td>3</td>
+								<td>34,425.00</td>
+								<td>234.00</td>
+								<td>421,342.00</td>
+								<td>cpl (200)</td>
+							</tr>
+							<tr class="details_row">
+								<td>aff/leo_test</td>
+								<td>15/08/02 (12:58)</td>
+								<td>232</td>
+								<td>114</td>
+								<td>12</td>
+								<td>6</td>
+								<td>3</td>
+								<td>29,436.00</td>
+								<td>941.00</td>
+								<td>784,435.00</td>
+								<td>cpl (200)</td>
+							</tr>
+							<tr class="details_row">
+								<td>aff/sam_test</td>
+								<td>17/08/02 (12:58)</td>
+								<td>232</td>
+								<td>114</td>
+								<td>12</td>
+								<td>6</td>
+								<td>3</td>
+								<td>34,425.00</td>
+								<td>234.00</td>
+								<td>421,342.00</td>
+								<td>cpl (200)</td>
+							</tr>
+							<tr class="details_row">
+								<td>aff/leo_test</td>
+								<td>15/08/02 (12:58)</td>
+								<td>232</td>
+								<td>114</td>
+								<td>12</td>
+								<td>6</td>
+								<td>3</td>
+								<td>29,436.00</td>
+								<td>941.00</td>
+								<td>784,435.00</td>
+								<td>cpl (200)</td>
+							</tr>
+							<tr class="details_row">
+								<td>aff/sam_test</td>
+								<td>17/08/02 (12:58)</td>
+								<td>232</td>
+								<td>114</td>
+								<td>12</td>
+								<td>6</td>
+								<td>3</td>
+								<td>34,425.00</td>
+								<td>234.00</td>
+								<td>421,342.00</td>
+								<td>cpl (200)</td>
+							</tr>
+							<tr class="details_row">
+								<td>aff/leo_test</td>
+								<td>15/08/02 (12:58)</td>
+								<td>232</td>
+								<td>114</td>
+								<td>12</td>
+								<td>6</td>
+								<td>3</td>
+								<td>29,436.00</td>
+								<td>941.00</td>
+								<td>784,435.00</td>
+								<td>cpl (200)</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="details_pagination">
+					<a href="#"><i class="icon-arrow-left"></i></a>
+					<a class="active" href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#"><i class="icon-arrow-right"></i></a>
+				</div>
+			</section>
+
+			<section class="section links toggle hidden" id="links_section">
+				<h1 class="section_header">links</h1>
+				<button class="btn_orange modalTrigger" data-target="url_modal">+ add new</button>
+				<div class="scroll_wrapper">
+					<table class="links_table container">
+						<tbody>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Home page</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.homepage.com">http://www.homepage.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Currently offer</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.currently.com">http://www.currently.com</a>
+								</td>    
+								<td class="links_line links_icons">    
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Blurpix</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.blurpix.com">http://www.blurpix.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Your Site</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.yoursite.com">http://www.yoursite.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Google</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.google.com">http://www.google.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Facebook</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.facebook.com">http://www.facebook.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Dashboard</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.dashboard.com">http://www.dashboard.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Blurax</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.blurax.com">http://www.blurax.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row"> 
+								<td class="links_line"><span class="links_name">Piece of Wine</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.pieceofwine.com">http://www.pieceofwine.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Twitter</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.twitter.com">http://www.twitter.com</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<button class="btn_orange modalTrigger" data-target="url_modal">+ add new</button>
+			</section>
+
+			<section class="section banners toggle hidden" id="banners_section">
+				<h1 class="section_header">banners</h1>
+				<button class="btn_orange modalTrigger" data-target="banner_modal">+ add new</button>
+				<div class="scroll_wrapper">
+					<table class="links_table container">
+						<tbody>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Banner main</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.website.com/bannermain.gif">http://www.website.com/bannermain.gif</a>
+								</td>    
+								<td class="links_line links_icons">
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Sign up banner</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.website.com/signup.gif">http://www.website.com/signup.gif</a>
+								</td>    
+								<td class="links_line links_icons">    
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Banner left side</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.website.com/leftside.gif">http://www.website.com/leftside.gif</a>
+								</td>    
+								<td class="links_line links_icons">    
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Vertical banner</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.website.com/vert.gif">http://www.website.com/vert.gif</a>
+								</td>    
+								<td class="links_line links_icons">    
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Front banner</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.website.com/front.gif">http://www.website.com/front.gif</a>
+								</td>    
+								<td class="links_line links_icons">    
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+	 						</tr>
+							<tr class="links_row">
+								<td class="links_line"><span class="links_name">Horizontal banner</span></td>
+								<td class="links_line">
+									<a class="links_site" href="http://www.website.com/horizontal.gif">http://www.website.com/horizontal.gif</a>
+								</td>    
+								<td class="links_line links_icons">    
+									<a class="links_icon" href="#"><i class="icon-links"></i></a>
+									<a class="links_icon" href="#"><i class="icon-trash"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<button class="btn_orange modalTrigger" data-target="banner_modal">+ add new</button>
+			</section>
+
+			<section class="section personal_data toggle hidden" id="personal_data_section">
+				<h1 class="section_header">personal data</h1>
+				<form class="personal_form">
+					<div class="personal_unit">
+						<label class="personal_label" for="name">Name</label>
+						<input class="personal_input" type="text" placeholder="Leonardo" name="name" id="name" required>
+						<label class="personal_label" for="surname">Surname</label>
+						<input class="personal_input" type="text" placeholder="Dicaprio" name="surname" id="surname" required>
+						<label class="personal_label" for="email">E-mail</label>
+						<input class="personal_input" type="text" placeholder="leo@gmail.com" name="email" id="email" required>
+						<label class="personal_label" for="phone">Phone number</label>
+						<input class="personal_input" type="text" placeholder="+1 432 555 00 44" name="phone" id="phone" minlength="9">
+					</div>
+					<div class="personal_line"></div>
+					<div class="personal_unit">
+						<label class="personal_label" for="skype">Skype</label>
+						<input class="personal_input" type="text" placeholder="Leonardo.D" name="skype" id="skype">
+						<label class="personal_label" for="icq">ICQ</label>
+						<input class="personal_input" type="text" name="icq" id="icq">
+						<label class="personal_label" for="msn">Msn</label>
+						<input class="personal_input" type="text" name="msn" id="msn">
+					</div>
+					<div class="personal_line"></div>
+					<div class="personal_unit">
+						<label class="personal_label" for="wallet">Wallet</label>
+						<input class="personal_input" type="text" name="wallet" id="wallet">
+					</div>
+					<div class="personal_line"></div>
+					<div class="personal_unit">
+						<label class="personal_label" for="password">Password</label>
+						<input class="personal_input" type="password" name="password" required id="password" minlength="6">
+						<label class="personal_label" for="repeat">Repeat</label>
+						<input class="personal_input" type="password" name="repeat" required id="repeat" minlength="6">
+					</div>
+					<div class="personal_line"></div>
+					<button type="submit" class="btn_orange">Save</button>
+				</form>
+			</section>
+
+			<section class="section payout toggle hidden" id="payout_section">
+				<h1 class="section_header">payout history</h1>
+				<div class="date_section">
+					<div class="date">
+						<div class="date_inputs">
+							<div class="date_start">16.05.2016</div>
+							<div class="date_end">16.05.2016</div>
+							<div class="date_icon">
+								<i class="icon-calendar"></i>
+							</div>
+						</div>
+						<button class="btn_refresh">
+								<i class="icon-refresh"></i>
+						</button>
+					</div>
+				</div>
+				<div class="scroll_wrapper">
+					<table class="details_table container">
+						<thead>
+							<tr class="details_name">
+								<th><div class="details_sorter">Date<i class="icon-arrow-up-small"></i></div></th>
+								<th>Amount ($)</th>
+								<th>Deal</th>
+								<th>Account</th>
+							</tr>
+						</thead>    
+						<tbody> 
+							<tr class="details_row">
+								<td>17/08/02 (12:58)</td>
+								<td>34,425.00</td>
+								<td>cpl (200)</td>
+								<td>bank</td>
+							</tr>
+							<tr class="details_row">
+								<td>15/08/02 (12:58)</td>
+								<td>29,436.00</td>
+								<td>cpl (200)</td>
+								<td>bank</td>
+							</tr>
+							<tr class="details_row">
+								<td>17/08/02 (12:58)</td>
+								<td>34,425.00</td>
+								<td>cpl (200)</td>
+								<td>bank</td>
+							</tr>
+							<tr class="details_row">
+								<td>15/08/02 (12:58)</td>
+								<td>29,436.00</td>
+								<td>cpl (200)</td>
+								<td>bank</td>
+							</tr>
+							<tr class="details_row">
+								<td>17/08/02 (12:58)</td>
+								<td>34,425.00</td>
+								<td>cpl (200)</td>
+								<td>bank</td>
+							</tr>
+							<tr class="details_row">
+								<td>15/08/02 (12:58)</td>
+								<td>29,436.00</td>
+								<td>cpl (200)</td>
+								<td>bank</td>
+							</tr>
+							<tr class="details_row">
+								<td>17/08/02 (12:58)</td>
+								<td>34,425.00</td>
+								<td>cpl (200)</td>
+								<td>bank</td>
+							</tr>
+							<tr class="details_row">
+								<td>15/08/02 (12:58)</td>
+								<td>29,436.00</td>
+								<td>cpl (200)</td>
+								<td>bank</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="details_pagination">
+					<a href="#"><i class="icon-arrow-left"></i></a>
+					<a class="active" href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#"><i class="icon-arrow-right"></i></a>
+				</div>
+			</section>
+
+			<section class="section postback toggle hidden" id="postback_section">
+				<h1 class="section_header">new postback</h1>
+				<p class="postback_text">You can insert some parameters in this postback:</p>
+				<form>
+					<div class="row postback_inputs">
+						<div class="col-md-6">
+							<p class="postback_paragraph">Signup:</p>
+							<textarea rows="10" class="postback_input" placeholder="crm_userld=%user_id% 
+								subid=%p%"></textarea>
+						</div>
+						<div class="col-md-6">
+							<p class="postback_paragraph">Deposit:</p>
+							<textarea rows="10" class="postback_input" placeholder="crm_userld=%user_id% 
+                                subid=%p%"></textarea>
+						</div>
+					</div>
+					<div class="row postback_inputs">
+						<div class="col-md-4">
+							<p class="postback_paragraph">Postback type:</p>
+							<select class="postback_select" name="postback-type">
+		                        <option value="S2S">S2S (http://..)</option>
+		                        <option value="S2S">S2S (http://..)</option>
+		                        <option value="S2S">S2S (http://..)</option>
+		                        <option value="S2S">S2S (http://..)</option>
+		                        <option value="S2S">S2S (http://..)</option>
+		                	</select>
+						</div>
+						<div class="col-md-4">
+							<p class="postback_paragraph">To countries:</p>
+							<select class="postback_select" name="to-countries">
+		                        <option value="select-countries">Select countries</option>
+		                        <option value="select-countries">Select countries</option>
+		                        <option value="select-countries">Select countries</option>
+		                        <option value="select-countries">Select countries</option>
+		                        <option value="select-countries">Select countries</option>
+		                	</select>
+						</div>
+						<div class="col-md-4">
+							<p class="postback_paragraph">Sending options:</p>
+							<select class="postback_select" name="sending-options">
+		                        <option value="select">Select</option>
+		                        <option value="select">Select</option>
+		                        <option value="select">Select</option>
+		                        <option value="select">Select</option>
+		                        <option value="select">Select</option>
+		                	</select>
+						</div>
+					</div>
+					<div class="row postback_inputs">
+						<div class="col-md-6 postback_col_left">
+							<p class="postback_paragraph"><span>NOT</span> send statuses:</p>
+							<div class="postback_checkbox">
+								<div class="checkbox">	
+									<label class="checkbox_label">checkNumber
+										<input type="checkbox">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<label class="checkbox_label">noAnswer
+										<input type="checkbox">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<label class="checkbox_label">noCall
+										<input type="checkbox">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<label class="checkbox_label">callAgain
+										<input type="checkbox">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<label class="checkbox_label">checkNumber
+										<input type="checkbox">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<label class="checkbox_label">noAnswer
+										<input type="checkbox">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<label class="checkbox_label">noCall
+										<input type="checkbox">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<label class="checkbox_label">callAgain
+										<input type="checkbox">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 postback_col_right">
+							<p class="postback_paragraph">Send after:</p>
+							<label class="postback_label">0 <span class="postback_left">168</span></label>
+							<div class="postback_range">
+								<div class="postback_line"><div class="postback_orange" id="torange"></div></div>
+								<div class="postback_triangle" id="triangle">▲
+									<div class="postback_number">104 hours</div>
+								</div>
+							</div>
+						</div>
+						<div class="postback_button">
+							<button type="submit" class="btn_orange">Create Pixel</button>
+						</div>
+					</div>
+				</form>		
+			</section>
+		</main>
+
+	<div class="overlay" id="url_modal">		
+		<div class="url modal">
+			<h2 class="section_header">ADD URL<i class="icon-close closeButton"></i></h2>
+			<div class="row url_inputs">
+				<div class="col-md-5">
+					<form>
+						<p class="url_label">Scheme name</p>
+						<input class="personal_input" type="text" placeholder="Name" name="name" id="name2" required>
+					</form>
+				</div>
+				<div class="col-md-5">
+					<form>
+						<p class="url_label">Compain</p>
+						<select class="postback_select" name="postback-type">
+	                        <option value="select-compain">Select compain</option>
+	                        <option value="select-compain">Select compain</option>
+	                        <option value="select-compain">Select compain</option>
+	                        <option value="select-compain">Select compain</option>
+	                        <option value="select-compain">Select compain</option>
+	                    </select>
+	                </form>
+                </div>
+                <div class="col-md-2">
+                	<form>
+	                	<p class="url_label">Language</p>
+						<select class="postback_select" name="postback-type">
+	                        <option value="english">English</option>
+	                        <option value="english">English</option>
+	                        <option value="english">English</option>
+	                        <option value="english">English</option>
+	                        <option value="english">English</option>
+	                    </select>
+	                </form>
+                </div>
+            </div>
+            <div class="url_select">
+            	<p class="url_paragraph">Select websites</p>
+            	<form>
+            		<div class="postback_checkbox">
+						<div class="checkbox">	
+							<label class="checkbox_label">Landing page Money<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">LP Your choise<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">LP Wallet<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">E-Shop 01<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Toy Store<i class="icon-show"></i>
+								<input type="checkbox" checked>
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Book Store<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Charity<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">LP Icons Store<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Templates Store<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Random text<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Mobile app<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">	
+							<label class="checkbox_label">LP Senator free signals<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">LP DE Your choise<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Invest wisely<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Toy Store LP Sign up page<i class="icon-show"></i>
+								<input type="checkbox" checked>
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Senator Account types<i class="icon-show"></i>
+								<input type="checkbox" checked>
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Senator Mobile app<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Senator Store<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Senator April Promo<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Language Learning LP<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Your second site<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Your second LP<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Landing page Money<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">LP your choise<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">LP Wallet<i class="icon-show"></i>
+								<input type="checkbox" checked>
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">E-shop 01<i class="icon-show"></i>
+								<input type="checkbox" checked>
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Toy Store<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Book Store<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">Mobile app<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="checkbox_label">LP Senator free signals<i class="icon-show"></i>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+					</div>
+				</form>	
+	        </div>
+            <div class="row url_generated">
+				<input class="personal_input" type="text" placeholder="Generated link" name="generated" id="name3">
+				<button type="button" disabled class="btn_disabled"><i class="icon-links"></i>Copy link</button>
+				<button type="submit" class="btn_orange closeButton">Save</button>
+		    </div>    	
+		</div>
+	</div>
+
+	<div class="overlay" id="banner_modal">		
+		<div class="banner modal">
+			<h2 class="section_header">ADD BANNERS<i class="icon-close closeButton"></i></h2>
+			<div class="row banner_inputs">
+				<div class="col-md-5">
+					<form>
+						<p class="url_label">Scheme name</p>
+						<input class="personal_input" type="text" placeholder="Name" name="name" id="name4" required>
+					</form>
+				</div>
+				<div class="col-md-5">
+					<form>
+						<p class="url_label">Compain</p>
+						<select class="postback_select" name="postback-type">
+	                        <option value="select-compain">Select compain</option>
+	                        <option value="select-compain">Select compain</option>
+	                        <option value="select-compain">Select compain</option>
+	                        <option value="select-compain">Select compain</option>
+	                        <option value="select-compain">Select compain</option>
+	                    </select>
+	                </form>
+                </div>
+                <div class="col-md-2">
+                	<form>
+	                	<p class="url_label">Language</p>
+						<select class="postback_select" name="postback-type">
+	                        <option value="english">English</option>
+	                        <option value="english">English</option>
+	                        <option value="english">English</option>
+	                        <option value="english">English</option>
+	                        <option value="english">English</option>
+	                    </select>
+	                </form>
+                </div>
+            </div>
+            <div class="row url_inputs">
+				<div class="col-md-4 col_top">
+					<form>
+						<p class="url_label">Weight-Height</p>
+						<select class="postback_select" name="postback-type">
+	                        <option value="select">Select</option>
+	                        <option value="select">Select</option>
+	                        <option value="select">Select</option>
+	                        <option value="select">Select</option>
+	                        <option value="select">Select</option>
+	                    </select>
+					</form>
+				</div>
+				<div class="col-md-4 col_top">
+					<form>
+						<p class="url_label">Design</p>
+						<select class="postback_select" name="postback-type">
+	                        <option value="select-compain">Select</option>
+	                        <option value="select-compain">Select</option>
+	                        <option value="select-compain">Select</option>
+	                        <option value="select-compain">Select</option>
+	                        <option value="select-compain">Select</option>
+	                    </select>
+	                </form>
+                </div>
+                <div class="col-md-4 col_top">
+                	<form>
+	                	<p class="url_label">File type</p>
+						<select class="postback_select" name="postback-type">
+	                        <option value="all">All</option>
+	                        <option value="all">All</option>
+	                        <option value="all">All</option>
+	                        <option value="all">All</option>
+	                        <option value="all">All</option>
+	                    </select>
+	                </form>
+                </div>
+            </div>
+            <div class="row url_select">
+            	<div class="col-md-6 col_left">
+	            	<p class="url_paragraph">Select banners</p>
+	            	<form>
+	            		<div class="postback_checkbox">
+							<div class="checkbox">
+								<label class="checkbox_label">Banner main<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Sign up banner<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Left banner<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Right banner<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Bottom banner<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Long banner<i class="icon-show"></i>
+									<input type="checkbox" checked>
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Personal cabinet banner<i class="icon-show"></i>
+									<input type="checkbox" checked>
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Popup banner<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Banner main<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Sign up banner<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Left banner<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Right banner<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+						</div>	
+					</form>
+				</div>
+				<div class="col-md-6 col_right">
+					<p class="url_paragraph">Select websites</p>
+	            	<form>
+						<div class="postback_checkbox">
+							<div class="checkbox">	
+								<label class="checkbox_label">Landing page Money<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">LP Your choise<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">LP Wallet<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">E-Shop 01<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Toy Store<i class="icon-show"></i>
+									<input type="checkbox" checked>
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Book Store<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Charity<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">LP Icons Store<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Templates Store<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Random text<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">
+								<label class="checkbox_label">Mobile app<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="checkbox">	
+								<label class="checkbox_label">LP Senator free signals<i class="icon-show"></i>
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+	            		</div>
+					</form>	
+				</div>
+	        </div>
+            <div class="row url_generated">
+        		<input class="personal_input" type="text" placeholder="Generated link" name="name" id="name5">
+        		<button type="button" disabled class="btn_disabled"><i class="icon-links"></i>Copy link</button>
+        		<button type="submit" class="btn_orange closeButton">Save</button>
+		    </div>    	
+		</div>
+	</div>
+
+	<div class="overlay" id="chat_modal">
+		<div class="message">
+			<h3 class="section_header">ONLINE CHAT WITH YOUR PERSONAL MENAGER<i class="icon-close closeButton"></i></h3>
+			<div class="message_avatar row">
+				<img src="images/chatavatar.png" alt="mikhael">
+				<div class="message_online">
+					<span class="message_user">Mikhael E.</span><br>
+					<img src="images/chatonline.png" alt="online">
+				</div>
+			</div>
+			<div class="chat">
+				<div class="chat_light">
+					<p class="chat_light_p">Hello. Can I help you?</p>
+				</div>
+				<div class="chat_dark">
+					<p class="chat_dark_p">Hello! I would like to know about Postback.</p>
+				</div>
+				<div class="chat_light">
+					<p class="chat_light_p">Ok. 5 min...</p>
+				</div>
+			</div>
+			<div class="row message_send">
+        		<input class="personal_input" type="text" placeholder="&#xf075; Enter the message..." style="font-family:Arial, FontAwesome" name="chat" id="chat">
+        		<button type="submit" class="btn_orange" id="chat_send">Send</button>
+		    </div>    
+		</div>
+	</div>
+	
+	<div class="overlay" id="start_login">
+		<div class="login">
+			<h3 class="section_header">LOGIN</h3>
+			<div class="row">
+				<input class="personal_input" type="text" placeholder="&#xf007; login name" style="font-family:Arial, FontAwesome" name="login-name" id="login_name">
+				<input class="personal_input" type="password" placeholder="&#xf023; password" style="font-family:Arial, FontAwesome" name="login-name" id="login_password">
+				<button type="submit" class="btn_orange closeButton">Enter</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="overlay" id="start_quit">
+		<div class="quit">
+			<h3 class="section_header">Do you really want to Quit?</h3>
+			<div class="row">
+				<button type="button" class="btn_grey closeButton">Cancel</button>
+				<button type="button" class="btn_orange" id="go_quit">Quit</button>
+			</div>
+		</div>
+	</div>
+			
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	<script src="./js/script.js"></script>	
+	</body>
+</html>
