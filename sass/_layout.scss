@@ -63,19 +63,19 @@ body {
         }
     }
 
-// Media query
-// @media(max-width: 767px) {
-//     @include grid('sm');
-// }
+//Media query
+@media(max-width: 767px) {
+    @include grid('sm');
+}
 
-// @media(min-width: 768px) {
-//     @include grid('md');
-// }
+@media(min-width: 768px) {
+    @include grid('md');
+}
 
-// @media(min-width: 992px) {
-//     @include grid('lg');
-// }
+@media(min-width: 992px) {
+    @include grid('lg');
+}
 
-// @media(min-width: 1200px) {
-//     @include grid('xl');
-// }
+@media(min-width: 1200px) {
+    @include grid('xl');
+}
