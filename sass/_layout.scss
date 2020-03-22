@@ -1,20 +1,26 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     margin: 0 auto;
-    font-family: $main-font;
+    font-family: $main_font;
     text-align: center;
-    background: $light-grey;
+    background: $light_grey;
 }
-
 .main {
     margin: 80px 0 0 220px;
-    width: calc(100% - 220px);
+    width: calc(100% - 240px);
     transition: all .40s ease;
 }
-
+.active_menu{
+    margin: 80px 0 0 80px;
+    width: calc(100% - 100px);
+    transition: all .40s ease;
+    @media(max-width: 767px) {
+        margin: 80px 0 0 60px;
+        width: calc(100% - 60px);
+    }
+}
 .container {
     margin: 0 auto;
     width: 100%;
@@ -22,28 +28,23 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
-
 .section {
     box-shadow: 0 0 1em $grey;
     margin-bottom: 20px;
     background: #fff;
 }
-
 .hidden {
-    display: none;
- }
-
+   display: none;
+}
 .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .row::before, .row::after {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row::before, .row::after {
     content: " ";
     display: table; 
     clear: both;
 }
-
 [class*="col-"] {
     width: 100%;
     padding: 25px;
@@ -53,10 +54,28 @@ body {
     }   
 }
 
+// Grid
 @for $i from 1 through 12 {
-    .col-sm-#{$i} {
-    $width: 100% / 12 * $i;
-    flex: 0 0 $width;
-    max-width: $width;
+        .col-sm-#{$i} {
+        $width: 100% / 12 * $i;
+        flex: 0 0 $width;
+        max-width: $width;
+        }
     }
+
+// Media query
+@media(max-width: 767px) {
+    @include grid('sm');
+}
+
+@media(min-width: 768px) {
+    @include grid('md');
+}
+
+@media(min-width: 992px) {
+    @include grid('lg');
+}
+
+@media(min-width: 1200px) {
+    @include grid('xl');
 }

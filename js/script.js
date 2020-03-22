@@ -7,44 +7,6 @@ var closeButtons = document.querySelectorAll('.closeButton');
 var mainElement = document.querySelector('.main');
 var leftMenu = document.getElementById('navigation');
 
-// Check user screen width (mobile/desktop)
-// if (window.screen.width < 768) {
-//   mainElement.classList.add('active_menu');
-//   leftMenu.classList.add("short");
-// }
- 
-// // Menu long short
-// function shortMenu(cur = leftMenu.className) {
-//   if (cur == 'menu_long')
-//   {
-//     leftMenu.classList.add("short");
-//     mainElement.classList.add('active_menu');
-    
-//   }
-//   else {
-//     leftMenu.classList.remove("short");
-//     mainElement.classList.remove('active_menu');
-  
-//   }
-// }
- 
-// // Add event-listener for toggle button (hamburger)
-// document.getElementById('toggle').addEventListener('click', function(e) {
-//   e.preventDefault();
-//   shortMenu();
-// });
-
-// // Highlight current page
-// for (var i = 0; i < menuPages.length; i++) {
-
-//   menuPages[i].addEventListener("click", function() {
-//   var current = document.getElementsByClassName("active");
-//   current[0].className = current[0].className.replace(" active", "");
-//   this.className += " active";
-//   });
-// }
-
-// Pages toggling
 for (var j = 0; j < menuPages.length; j++) {
   menuPages[j].addEventListener("click", function () {
     var menuPages = this.getAttribute("href");
@@ -60,8 +22,26 @@ for (var j = 0; j < menuPages.length; j++) {
       }
   });
 }
- 
-// Modals
+ // hamburger
+function shortMenu(cur = leftMenu.className) {
+  if (cur == 'menu_long')
+  {
+    leftMenu.classList.add("short");
+    mainElement.classList.add('active_menu');
+    
+  }
+  else {
+    leftMenu.classList.remove("short");
+    mainElement.classList.remove('active_menu');
+  
+  }
+}
+
+document.getElementById('toggle').addEventListener('click', function(e) {
+  e.preventDefault();
+  shortMenu();
+});
+
 function closeAllModals() {
   for (var l = 0; l < modalWrapper.length; l++) {
     modalWrapper[l].classList.remove('show');
@@ -101,11 +81,6 @@ for (var n = 0; n < modalTrigger.length; n++) {
   modalTrigger[n].addEventListener('click', openModal);
 }
 
-// // Postback slide
-// document.getElementById('triangle').style.marginLeft='61.9%';
-// document.getElementById('torange').style.width='61.9%';
-
-// const canavas = document.getElementById('canavas');
 
 const canavas = document.getElementById('myChart').getContext('2d');
 

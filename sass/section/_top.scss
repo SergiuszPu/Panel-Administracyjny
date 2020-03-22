@@ -25,19 +25,31 @@
 		&:hover {
 			background: $light_grey;
 		}
+		@media(max-width: 767px) {
+			font-size: 12px;
+			overflow-wrap: break-word;
+		}
 	}
 	&_money {
 		font-weight: 500;
 		font-size: 17px;
+
+		@media(max-width: 767px) {
+			font-size: 12px;
+		}
 	}
 	&_name {
 		font-size: $paragraph_font_size;
         color: $blue;
     }
-    // [class*='icon-'] {
-    // 	padding: 0 10px 0 5px;
-    // 	font-size: $header_font_size;
-    // }
+	[class*='icon-'] {
+    	padding: 0 10px 0 5px;
+    	font-size: $header_font_size;
+    	@media(max-width: 767px) {
+    		padding: 0 5px;
+    		font-size: 14px;
+    	}
+    }
     .icon-arrow-down-small {
     	font-size: 10px;
     } 
@@ -48,5 +60,9 @@
 	background: $dark_orange;
 	border-radius: 50%;
 	width: 8px;
-    height: 8px;
+	height: 8px;
+	@media(max-width: 767px) {
+		top: 37%;
+		right: 19%;
+	}
 }

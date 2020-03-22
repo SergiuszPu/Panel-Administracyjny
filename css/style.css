@@ -1376,14 +1376,39 @@ body {
   background: #F5F5F2;
 }
 
+@media (max-width: 767px) {
+  .top_item {
+    font-size: 12px;
+    overflow-wrap: break-word;
+  }
+}
+
 .top_money {
   font-weight: 500;
   font-size: 17px;
 }
 
+@media (max-width: 767px) {
+  .top_money {
+    font-size: 12px;
+  }
+}
+
 .top_name {
   font-size: 14px;
   color: #56819F;
+}
+
+.top [class*='icon-'] {
+  padding: 0 10px 0 5px;
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  .top [class*='icon-'] {
+    padding: 0 5px;
+    font-size: 14px;
+  }
 }
 
 .top .icon-arrow-down-small {
@@ -1400,6 +1425,13 @@ body {
   border-radius: 50%;
   width: 8px;
   height: 8px;
+}
+
+@media (max-width: 767px) {
+  .orange_circle {
+    top: 37%;
+    right: 19%;
+  }
 }
 
 .menu_long {
@@ -1452,7 +1484,7 @@ body {
   color: #979797;
 }
 
-.menu_long .menu_link:hover {
+.menu_long .active, .menu_long .menu_link:hover {
   border-left: 5px solid #F58220;
   background: #333333;
   color: #fff;
@@ -1568,10 +1600,24 @@ body {
   color: #191919;
 }
 
+@media (max-width: 767px) {
+  .date_inputs {
+    width: 90%;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+}
+
 .date_start {
   -ms-flex-pack: start;
       justify-content: flex-start;
   padding: 5px 0 5px 15px;
+}
+
+@media (max-width: 767px) {
+  .date_start {
+    padding: 5px 0 5px 5px;
+  }
 }
 
 .date_end {
@@ -1581,10 +1627,22 @@ body {
   border-left: 1px solid #E3E3E3;
 }
 
+@media (max-width: 767px) {
+  .date_end {
+    padding: 5px 0 5px 5px;
+  }
+}
+
 .date_icon {
   -ms-flex-pack: end;
       justify-content: flex-end;
   color: #979797;
   padding-right: 15px;
+}
+
+@media (max-width: 767px) {
+  .date_icon {
+    padding-right: 5px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

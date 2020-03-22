@@ -39,7 +39,7 @@
         color: $dark_grey;
     }
 
-    .menu_link:hover {
+    .active, .menu_link:hover {
 		border-left: 5px solid $dark_orange;
 		background: $light_black;
         color: #fff;
